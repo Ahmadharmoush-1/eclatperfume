@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1763378379113,
@@ -24,6 +24,10 @@
                 {
                     "date": 1763379166937,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n                 <div>\r\n                   <h3 className=\"text-lg font-semibold text-foreground mb-2\">Email Address</h3>\r\n                   <p className=\"text-muted-foreground\">\r\n                     info@drsmithdental.com<br />\r\n-                    appointments@drsmithdental.com\r\n+                    appointments@drosammadental.com\r\n                   </p>\r\n                 </div>\r\n               </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1763379362571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n                 <div>\r\n                   <h3 className=\"text-lg font-semibold text-foreground mb-2\">Email Address</h3>\r\n                   <p className=\"text-muted-foreground\">\r\n                     info@drsmithdental.com<br />\r\n-                    appointments@drosammadental.com\r\n+                    appointments@drossamadental.com\r\n                   </p>\r\n                 </div>\r\n               </div>\r\n             </div>\r\n@@ -90,9 +90,9 @@\n               </div>\r\n             </div>\r\n \r\n             <div className=\"bg-card p-6 rounded-2xl shadow-lg border border-border\">\r\n-              <h3 className=\"text-lg font-semibold text-foreground mb-4\">Follow Us</h3>\r\n+              <h3 className=\"text-lg font-semibold text-foreground mb-4\">Follow us</h3>\r\n               <div className=\"flex gap-4\">\r\n                 <button className=\"bg-primary/10 p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-110\">\r\n                   <Facebook className=\"text-primary hover:text-primary-foreground\" size={24} />\r\n                 </button>\r\n"
                 }
             ],
             "date": 1763378379113,

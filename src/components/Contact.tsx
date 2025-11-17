@@ -91,7 +91,7 @@ const Contact = () => {
             </div>
 
             <div className="bg-card p-6 rounded-2xl shadow-lg border border-border">
-              <h3 className="text-lg font-semibold text-foreground mb-4">Follow Us</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">Follow us</h3>
               <div className="flex gap-4">
                 <button className="bg-primary/10 p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-110">
                   <Facebook className="text-primary hover:text-primary-foreground" size={24} />
