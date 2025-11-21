@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold text-primary mb-4">Dr.Ossama Bachour</h3>
+            <h3 className="text-xl font-bold text-primary mb-4">Dr.SarahFarhatDib</h3>
             <p className="text-muted-foreground">
               Transforming smiles with advanced cosmetic dentistry and compassionate care.
             </p>
@@ -85,14 +85,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail size={20} className="text-primary flex-shrink-0" />
-                <span>info@drsmithdental.com</span>
+                <span>info@drsarahfarhatdib.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Dr.Ossama Bachour. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Dr.Sarah Farhat Dib. All rights reserved.</p>
         </div>
       </div>
     </footer>

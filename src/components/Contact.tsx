@@ -29,9 +29,13 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Clinic Address</h3>
                   <p className="text-muted-foreground">
-                    Hamra<br />
+                    Nabatieh<br />
                     <br />
-                    Beirut ,Lebanon
+                     ,Lebanon
+                  </p>  <p className="text-muted-foreground">
+                    Beirut , Luxury Clinic<br />
+                    <br />
+                     ,Lebanon
                   </p>
                 </div>
               </div>
@@ -67,8 +71,8 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Email Address</h3>
                   <p className="text-muted-foreground">
-                    info@drsmithdental.com<br />
-                    appointments@drossamadental.com
+                    info@drsarahfarhatdib.com<br />
+                    appointments@drsarahfarhatdib.com
                   </p>
                 </div>
               </div>

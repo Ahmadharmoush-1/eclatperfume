@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const testimonials = [
   {
     name: "Emily Johnson",
-    text: "Dr. Smith completely transformed my smile! The veneers look so natural, and the entire process was comfortable and professional. I can't stop smiling now!",
+    text: "Dr.Sarah completely transformed my smile! The veneers look so natural, and the entire process was comfortable and professional. I can't stop smiling now!",
     rating: 5,
   },
   {
@@ -15,12 +15,12 @@ const testimonials = [
   },
   {
     name: "Sarah Williams",
-    text: "After years of feeling self-conscious about my smile, Dr. Smith's smile makeover gave me the confidence I always wanted. The results are absolutely stunning!",
+    text: "After years of feeling self-conscious about my smile,Dr.Sarah  smile makeover gave me the confidence I always wanted. The results are absolutely stunning!",
     rating: 5,
   },
   {
     name: "David Martinez",
-    text: "Professional, caring, and highly skilled. My dental implants look and feel just like real teeth. Dr. Smith is truly an artist in cosmetic dentistry.",
+    text: "Professional, caring, and highly skilled. My dental implants look and feel just like real teeth. Dr.Sarah  is truly an artist in cosmetic dentistry.",
     rating: 5,
   },
 ];

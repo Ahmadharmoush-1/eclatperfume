@@ -21,13 +21,13 @@ const Hero = () => {
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left animate-slide-in-left">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
-              Dr.Ossama Bachour
+              Dr.Sarah
             </h1>
             <p className="text-xl md:text-2xl text-primary font-semibold mb-6">
               Expert Cosmetic Dentist
             </p>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-              Transforming smiles with advanced cosmetic dentistry. Over 15 years of experience in creating beautiful, confident smiles.
+              Transforming smiles with advanced cosmetic dentistry. Over years of experience in creating beautiful, confident smiles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button

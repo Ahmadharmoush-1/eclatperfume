@@ -6,7 +6,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About Dr.Ossama Bachour
+            About Dr.Sarah Farhat Dib
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             A dedicated professional committed to providing exceptional dental care with a gentle touch
@@ -16,10 +16,10 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
             <p className="text-lg text-foreground mb-6 leading-relaxed">
-              Dr.Ossama Bachour is a board-certified cosmetic dentist with over 15 years of experience in transforming smiles. Her passion for dentistry began at a young age, and she has dedicated her career to helping patients achieve their dream smiles through advanced cosmetic procedures.
+              Dr.Sarah Farhat Dib is a board-certified cosmetic dentist with over 15 years of experience in transforming smiles. Her passion for dentistry began at a young age, and she has dedicated her career to helping patients achieve their dream smiles through advanced cosmetic procedures.
             </p>
             <p className="text-lg text-foreground mb-6 leading-relaxed">
-              With a patient-first approach, Dr. Ossama combines artistic vision with cutting-edge dental technology to deliver stunning, natural-looking results. She believes that everyone deserves a smile they can be proud of.
+              With a patient-first approach,Dr.Sarah combines artistic vision with cutting-edge dental technology to deliver stunning, natural-looking results. She believes that everyone deserves a smile they can be proud of.
             </p>
           </div>
 

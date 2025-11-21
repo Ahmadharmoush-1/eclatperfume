@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1763378384824,
@@ -12,6 +12,22 @@
                 {
                     "date": 1763379051630,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <div className=\"container mx-auto px-4 py-12\">\r\n         <div className=\"grid md:grid-cols-4 gap-8\">\r\n           {/* About */}\r\n           <div>\r\n-            <h3 className=\"text-xl font-bold text-primary mb-4\">Dr. Smith Dental</h3>\r\n+            <h3 className=\"text-xl font-bold text-primary mb-4\">Dr.Ossama Bachour</h3>\r\n             <p className=\"text-muted-foreground\">\r\n               Transforming smiles with advanced cosmetic dentistry and compassionate care.\r\n             </p>\r\n           </div>\r\n@@ -91,9 +91,9 @@\n           </div>\r\n         </div>\r\n \r\n         <div className=\"border-t border-border mt-8 pt-8 text-center text-muted-foreground\">\r\n-          <p>&copy; {new Date().getFullYear()} Dr. Smith Dental. All rights reserved.</p>\r\n+          <p>&copy; {new Date().getFullYear()} Dr.Ossama Bachour. All rights reserved.</p>\r\n         </div>\r\n       </div>\r\n     </footer>\r\n   );\r\n"
+                },
+                {
+                    "date": 1763738736592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,9 @@\n           </div>\r\n         </div>\r\n \r\n         <div className=\"border-t border-border mt-8 pt-8 text-center text-muted-foreground\">\r\n-          <p>&copy; {new Date().getFullYear()} Dr.Ossama Bachour. All rights reserved.</p>\r\n+          <p>&copy; {new Date().getFullYear()} Dr.Sarah Farhat Dib. All rights reserved.</p>\r\n         </div>\r\n       </div>\r\n     </footer>\r\n   );\r\n"
+                },
+                {
+                    "date": 1763738744575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n                 <span>+1 (555) 123-4567</span>\r\n               </li>\r\n               <li className=\"flex items-center gap-2 text-muted-foreground\">\r\n                 <Mail size={20} className=\"text-primary flex-shrink-0\" />\r\n-                <span>info@drsmithdental.com</span>\r\n+                <span>info@drsarahfarhatdib.com</span>\r\n               </li>\r\n             </ul>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1763738755992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <div className=\"container mx-auto px-4 py-12\">\r\n         <div className=\"grid md:grid-cols-4 gap-8\">\r\n           {/* About */}\r\n           <div>\r\n-            <h3 className=\"text-xl font-bold text-primary mb-4\">Dr.Ossama Bachour</h3>\r\n+            <h3 className=\"text-xl font-bold text-primary mb-4\">Dr.Farhat </h3>\r\n             <p className=\"text-muted-foreground\">\r\n               Transforming smiles with advanced cosmetic dentistry and compassionate care.\r\n             </p>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1763738765941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <div className=\"container mx-auto px-4 py-12\">\r\n         <div className=\"grid md:grid-cols-4 gap-8\">\r\n           {/* About */}\r\n           <div>\r\n-            <h3 className=\"text-xl font-bold text-primary mb-4\">Dr.Farhat </h3>\r\n+            <h3 className=\"text-xl font-bold text-primary mb-4\">Dr.SarahFarhatDib</h3>\r\n             <p className=\"text-muted-foreground\">\r\n               Transforming smiles with advanced cosmetic dentistry and compassionate care.\r\n             </p>\r\n           </div>\r\n"
                 }
             ],
             "date": 1763378384824,

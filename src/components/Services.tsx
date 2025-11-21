@@ -12,7 +12,7 @@ const services = [
   },
   {
     icon: Smile,
-    title: "Veneers",
+    title: "Endodontics",
     description: "Custom porcelain veneers that create a perfectly aligned, bright, and beautiful smile.",
   },
   {
@@ -32,19 +32,19 @@ const services = [
   },
   {
     icon: AlignHorizontalJustifyCenter,
-    title: "Invisalign / Braces",
+    title: "Hollywood Smile",
     description: "Clear aligners and traditional braces to straighten teeth discreetly and effectively.",
   },
-  {
-    icon: Scissors,
-    title: "Gum Contouring",
-    description: "Laser gum reshaping to create a balanced, aesthetically pleasing smile line.",
-  },
-  {
-    icon: Activity, 
-    title: "Root Canal",
-    description: "Pain-free root canal treatments to save damaged teeth and restore oral health.",
-  },
+  // {
+  //   icon: Scissors,
+  //   title: "Gum Contouring",
+  //   description: "Laser gum reshaping to create a balanced, aesthetically pleasing smile line.",
+  // },
+  // {
+  //   icon: Activity, 
+  //   title: "Root Canal",
+  //   description: "Pain-free root canal treatments to save damaged teeth and restore oral health.",
+  // },
 ];
 
 const Services = () => {

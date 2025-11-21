@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1763378359403,
@@ -32,6 +32,26 @@
                 {
                     "date": 1763379116300,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,10 @@\n                 </div>\r\n                 <div>\r\n                   <h3 className=\"text-xl font-semibold text-foreground mb-2\">Certifications</h3>\r\n                   <p className=\"text-muted-foreground\">\r\n-                    Name<br />\r\n-                    <br />\r\n+                    Name of  <br />\r\n+                   Certifications <br />\r\n                     \r\n                   </p>\r\n                 </div>\r\n               </div>\r\n"
+                },
+                {
+                    "date": 1763738592391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <section id=\"about\" className=\"py-20 bg-background\">\r\n       <div className=\"container mx-auto px-4\">\r\n         <div className=\"text-center mb-12 animate-slide-up\">\r\n           <h2 className=\"text-4xl md:text-5xl font-bold text-foreground mb-4\">\r\n-            About Dr.Ossama Bachour\r\n+            About Dr. Bachour\r\n           </h2>\r\n           <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto\">\r\n             A dedicated professional committed to providing exceptional dental care with a gentle touch\r\n           </p>\r\n"
+                },
+                {
+                    "date": 1763738601332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <section id=\"about\" className=\"py-20 bg-background\">\r\n       <div className=\"container mx-auto px-4\">\r\n         <div className=\"text-center mb-12 animate-slide-up\">\r\n           <h2 className=\"text-4xl md:text-5xl font-bold text-foreground mb-4\">\r\n-            About Dr. Bachour\r\n+            About Dr.Sarah Bachour\r\n           </h2>\r\n           <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto\">\r\n             A dedicated professional committed to providing exceptional dental care with a gentle touch\r\n           </p>\r\n"
+                },
+                {
+                    "date": 1763738609145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <section id=\"about\" className=\"py-20 bg-background\">\r\n       <div className=\"container mx-auto px-4\">\r\n         <div className=\"text-center mb-12 animate-slide-up\">\r\n           <h2 className=\"text-4xl md:text-5xl font-bold text-foreground mb-4\">\r\n-            About Dr.Sarah Bachour\r\n+            About Dr.Sarah FaDib\r\n           </h2>\r\n           <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto\">\r\n             A dedicated professional committed to providing exceptional dental care with a gentle touch\r\n           </p>\r\n"
+                },
+                {
+                    "date": 1763738617335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <section id=\"about\" className=\"py-20 bg-background\">\r\n       <div className=\"container mx-auto px-4\">\r\n         <div className=\"text-center mb-12 animate-slide-up\">\r\n           <h2 className=\"text-4xl md:text-5xl font-bold text-foreground mb-4\">\r\n-            About Dr.Sarah FaDib\r\n+            About Dr.Sarah Farhat Dib\r\n           </h2>\r\n           <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto\">\r\n             A dedicated professional committed to providing exceptional dental care with a gentle touch\r\n           </p>\r\n@@ -15,9 +15,9 @@\n \r\n         <div className=\"grid md:grid-cols-2 gap-12 items-center\">\r\n           <div className=\"animate-slide-in-left\">\r\n             <p className=\"text-lg text-foreground mb-6 leading-relaxed\">\r\n-              Dr.Ossama Bachour is a board-certified cosmetic dentist with over 15 years of experience in transforming smiles. Her passion for dentistry began at a young age, and she has dedicated her career to helping patients achieve their dream smiles through advanced cosmetic procedures.\r\n+              Dr.Sarah Farhat Dib is a board-certified cosmetic dentist with over 15 years of experience in transforming smiles. Her passion for dentistry began at a young age, and she has dedicated her career to helping patients achieve their dream smiles through advanced cosmetic procedures.\r\n             </p>\r\n             <p className=\"text-lg text-foreground mb-6 leading-relaxed\">\r\n               With a patient-first approach, Dr. Ossama combines artistic vision with cutting-edge dental technology to deliver stunning, natural-looking results. She believes that everyone deserves a smile they can be proud of.\r\n             </p>\r\n"
+                },
+                {
+                    "date": 1763738625260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             <p className=\"text-lg text-foreground mb-6 leading-relaxed\">\r\n               Dr.Sarah Farhat Dib is a board-certified cosmetic dentist with over 15 years of experience in transforming smiles. Her passion for dentistry began at a young age, and she has dedicated her career to helping patients achieve their dream smiles through advanced cosmetic procedures.\r\n             </p>\r\n             <p className=\"text-lg text-foreground mb-6 leading-relaxed\">\r\n-              With a patient-first approach, Dr. Ossama combines artistic vision with cutting-edge dental technology to deliver stunning, natural-looking results. She believes that everyone deserves a smile they can be proud of.\r\n+              With a patient-first approach,Dr.Sarah combines artistic vision with cutting-edge dental technology to deliver stunning, natural-looking results. She believes that everyone deserves a smile they can be proud of.\r\n             </p>\r\n           </div>\r\n \r\n           <div className=\"grid gap-6 animate-fade-in\">\r\n"
                 }
             ],
             "date": 1763378359403,

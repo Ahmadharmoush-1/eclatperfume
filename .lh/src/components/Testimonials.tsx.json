@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1763378423051,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1763738809982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const testimonials = [\r\n   {\r\n     name: \"Emily Johnson\",\r\n-    text: \"Dr. Smith completely transformed my smile! The veneers look so natural, and the entire process was comfortable and professional. I can't stop smiling now!\",\r\n+    text: \"Dr.Sarah completely transformed my smile! The veneers look so natural, and the entire process was comfortable and professional. I can't stop smiling now!\",\r\n     rating: 5,\r\n   },\r\n   {\r\n     name: \"Michael Chen\",\r\n"
+                },
+                {
+                    "date": 1763738816256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     rating: 5,\r\n   },\r\n   {\r\n     name: \"Sarah Williams\",\r\n-    text: \"After years of feeling self-conscious about my smile, Dr. Smith's smile makeover gave me the confidence I always wanted. The results are absolutely stunning!\",\r\n+    text: \"After years of feeling self-conscious about my smile,Dr.Sarah  smile makeover gave me the confidence I always wanted. The results are absolutely stunning!\",\r\n     rating: 5,\r\n   },\r\n   {\r\n     name: \"David Martinez\",\r\n"
                 }
             ],
             "date": 1763378423051,
