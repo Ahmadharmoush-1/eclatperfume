@@ -58,11 +58,11 @@ const OptimizedImage = ({
   return (
     <div
       ref={imgRef}
-      className={cn(
-        'relative overflow-hidden bg-muted',
-        aspectClasses[aspectRatio],
-        className
-      )}
+     className={cn(
+  'h-full w-full object-contain scale-110 transition-all duration-500',
+  isLoaded ? 'opacity-100' : 'opacity-0'
+)}
+
     >
       {/* Placeholder */}
       {!isLoaded && (

@@ -3,11 +3,47 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1766782373386,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767010239035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,13 +57,13 @@\n \r\n   return (\r\n     <div\r\n       ref={imgRef}\r\n-      className={cn(\r\n-        'relative overflow-hidden bg-muted',\r\n-        aspectClasses[aspectRatio],\r\n-        className\r\n-      )}\r\n+     className={cn(\r\n+  'h-full w-full object-contain scale-95 transition-all duration-500',\r\n+  isLoaded ? 'opacity-100' : 'opacity-0'\r\n+)}\r\n+\r\n     >\r\n       {/* Placeholder */}\r\n       {!isLoaded && (\r\n         <div \r\n"
+                },
+                {
+                    "date": 1767010272887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,10 @@\n   return (\r\n     <div\r\n       ref={imgRef}\r\n      className={cn(\r\n-  'h-full w-full object-contain scale-95 transition-all duration-500',\r\n+  'h-full w-full object-cover scale-90\r\n+ transition-all duration-500',\r\n   isLoaded ? 'opacity-100' : 'opacity-0'\r\n )}\r\n \r\n     >\r\n"
+                },
+                {
+                    "date": 1767010280357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,10 +58,9 @@\n   return (\r\n     <div\r\n       ref={imgRef}\r\n      className={cn(\r\n-  'h-full w-full object-cover scale-90\r\n- transition-all duration-500',\r\n+  'h-full w-full object-contain scale-95 transition-all duration-500',\r\n   isLoaded ? 'opacity-100' : 'opacity-0'\r\n )}\r\n \r\n     >\r\n"
+                },
+                {
+                    "date": 1767010285956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n   return (\r\n     <div\r\n       ref={imgRef}\r\n      className={cn(\r\n-  'h-full w-full object-contain scale-95 transition-all duration-500',\r\n+  'h-full w-full  transition-all duration-500',\r\n   isLoaded ? 'opacity-100' : 'opacity-0'\r\n )}\r\n \r\n     >\r\n"
+                },
+                {
+                    "date": 1767010292172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n   return (\r\n     <div\r\n       ref={imgRef}\r\n      className={cn(\r\n-  'h-full w-full  transition-all duration-500',\r\n+  'h-full w-full object-cover  transition-all duration-500',\r\n   isLoaded ? 'opacity-100' : 'opacity-0'\r\n )}\r\n \r\n     >\r\n"
+                },
+                {
+                    "date": 1767010302913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n   return (\r\n     <div\r\n       ref={imgRef}\r\n      className={cn(\r\n-  'h-full w-full object-cover  transition-all duration-500',\r\n+  'h-full w-full object-contain scale-95 transition-all duration-500',\r\n   isLoaded ? 'opacity-100' : 'opacity-0'\r\n )}\r\n \r\n     >\r\n"
+                },
+                {
+                    "date": 1767010316109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n   return (\r\n     <div\r\n       ref={imgRef}\r\n      className={cn(\r\n-  'h-full w-full object-contain scale-95 transition-all duration-500',\r\n+  'h-full w-full object-contain scale-110 transition-all duration-500',\r\n   isLoaded ? 'opacity-100' : 'opacity-0'\r\n )}\r\n \r\n     >\r\n"
+                },
+                {
+                    "date": 1767010322015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n   return (\r\n     <div\r\n       ref={imgRef}\r\n      className={cn(\r\n-  'h-full w-full object-contain scale-110 transition-all duration-500',\r\n+  'h-full w-full object-contain scale-115 transition-all duration-500',\r\n   isLoaded ? 'opacity-100' : 'opacity-0'\r\n )}\r\n \r\n     >\r\n"
+                },
+                {
+                    "date": 1767010330310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n   return (\r\n     <div\r\n       ref={imgRef}\r\n      className={cn(\r\n-  'h-full w-full object-contain scale-115 transition-all duration-500',\r\n+  'h-full w-full object-contain scale-110 transition-all duration-500',\r\n   isLoaded ? 'opacity-100' : 'opacity-0'\r\n )}\r\n \r\n     >\r\n"
                 }
             ],
             "date": 1766782373386,
