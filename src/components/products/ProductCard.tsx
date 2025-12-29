@@ -37,7 +37,6 @@ const ProductCard = memo(({ product, priority = false, index = 0 }: ProductCardP
             src={product.image}
             alt={product.name}
             priority={priority}
-            aspectRatio="square"
             className="!object-contain w-[85%] h-[85%] transition-transform duration-500 group-hover:scale-105"
           />
         </div>

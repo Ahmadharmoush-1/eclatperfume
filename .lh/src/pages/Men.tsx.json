@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1766781906009,
@@ -12,6 +12,10 @@
                 {
                     "date": 1766863610119,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n         />\r\n       </Helmet>\r\n \r\n       <Layout>\r\n-        <div className=\"container py-8\">\r\n+        <div className=\"container py-8 page-transition\">\r\n           {/* Page Header */}\r\n-          <div className=\"text-center mb-8 md:mb-12 animate-fade-up\">\r\n+          <div className=\"text-center mb-8 md:mb-12 animate-fade-in-up\">\r\n             <h1 className=\"font-serif text-4xl md:text-5xl font-bold mb-4\">\r\n               <span className=\"gradient-gold-text\">Men's Collection</span>\r\n             </h1>\r\n             <p className=\"text-muted-foreground text-lg max-w-2xl mx-auto\">\r\n"
+                },
+                {
+                    "date": 1767027074116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n import { getProductsByCategory } from '@/data/products';\r\n \r\n const Men = () => {\r\n   const products = getProductsByCategory('men');\r\n+    useEffect(() => {\r\n+    window.scrollTo({ top: 0, behavior: 'instant' });\r\n+  }, []);\r\n \r\n   return (\r\n     <>\r\n       <Helmet>\r\n"
                 }
             ],
             "date": 1766781906009,

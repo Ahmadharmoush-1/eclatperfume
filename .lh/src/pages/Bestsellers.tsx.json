@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1766781883429,
@@ -12,6 +12,14 @@
                 {
                     "date": 1766863600315,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n         />\r\n       </Helmet>\r\n \r\n       <Layout>\r\n-        <div className=\"container py-8\">\r\n+        <div className=\"container py-8 page-transition\">\r\n           {/* Page Header */}\r\n-          <div className=\"text-center mb-8 md:mb-12 animate-fade-up\">\r\n+          <div className=\"text-center mb-8 md:mb-12 animate-fade-in-up\">\r\n             <h1 className=\"font-serif text-4xl md:text-5xl font-bold mb-4\">\r\n               <span className=\"gradient-gold-text\">Bestsellers</span>\r\n             </h1>\r\n             <p className=\"text-muted-foreground text-lg max-w-2xl mx-auto\">\r\n"
+                },
+                {
+                    "date": 1767027086089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,12 @@\n import { getProductsByCategory } from '@/data/products';\r\n \r\n const Bestsellers = () => {\r\n   const products = getProductsByCategory('bestseller');\r\n+    const products = getProductsByCategory('men');\r\n+      useEffect(() => {\r\n+      window.scrollTo({ top: 0, behavior: 'instant' });\r\n+    }, []);\r\n \r\n   return (\r\n     <>\r\n       <Helmet>\r\n"
+                },
+                {
+                    "date": 1767027093028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,13 @@\n import { getProductsByCategory } from '@/data/products';\r\n \r\n const Bestsellers = () => {\r\n   const products = getProductsByCategory('bestseller');\r\n-    const products = getProductsByCategory('men');\r\n+   \r\n       useEffect(() => {\r\n       window.scrollTo({ top: 0, behavior: 'instant' });\r\n     }, []);\r\n+  \r\n \r\n   return (\r\n     <>\r\n       <Helmet>\r\n"
                 }
             ],
             "date": 1766781883429,

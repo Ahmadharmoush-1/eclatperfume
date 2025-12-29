@@ -2,9 +2,13 @@ import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/layout/Layout';
 import ProductGrid from '@/components/products/ProductGrid';
 import { getProductsByCategory } from '@/data/products';
+import { useEffect } from 'react';
 
 const Men = () => {
   const products = getProductsByCategory('men');
+    useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
 
   return (
     <>

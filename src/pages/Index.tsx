@@ -4,11 +4,15 @@ import HeroSection from '@/components/home/HeroSection';
 import TrustSection from '@/components/home/TrustSection';
 import CollectionPreview from '@/components/home/CollectionPreview';
 import { getProductsByCategory } from '@/data/products';
-
+import { useEffect } from 'react';
 const Index = () => {
   const menProducts = getProductsByCategory('men');
   const womenProducts = getProductsByCategory('women');
   const bestsellers = getProductsByCategory('bestseller');
+   
+      useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }, []);
 
   return (
     <>
