@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1763378457804,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1766781945835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,26 +2,45 @@\n import { Toaster as Sonner } from \"@/components/ui/sonner\";\r\n import { TooltipProvider } from \"@/components/ui/tooltip\";\r\n import { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\r\n import { BrowserRouter, Routes, Route } from \"react-router-dom\";\r\n+import { HelmetProvider } from \"react-helmet-async\";\r\n+import { CartProvider } from \"@/contexts/CartContext\";\r\n import Index from \"./pages/Index\";\r\n+import Men from \"./pages/Men\";\r\n+import Women from \"./pages/Women\";\r\n+import Bestsellers from \"./pages/Bestsellers\";\r\n+import About from \"./pages/About\";\r\n+import Contact from \"./pages/Contact\";\r\n+import Privacy from \"./pages/Privacy\";\r\n+import Terms from \"./pages/Terms\";\r\n import NotFound from \"./pages/NotFound\";\r\n \r\n const queryClient = new QueryClient();\r\n \r\n const App = () => (\r\n-  <QueryClientProvider client={queryClient}>\r\n-    <TooltipProvider>\r\n-      <Toaster />\r\n-      <Sonner />\r\n-      <BrowserRouter>\r\n-        <Routes>\r\n-          <Route path=\"/\" element={<Index />} />\r\n-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL \"*\" ROUTE */}\r\n-          <Route path=\"*\" element={<NotFound />} />\r\n-        </Routes>\r\n-      </BrowserRouter>\r\n-    </TooltipProvider>\r\n-  </QueryClientProvider>\r\n+  <HelmetProvider>\r\n+    <QueryClientProvider client={queryClient}>\r\n+      <CartProvider>\r\n+        <TooltipProvider>\r\n+          <Toaster />\r\n+          <Sonner />\r\n+          <BrowserRouter>\r\n+            <Routes>\r\n+              <Route path=\"/\" element={<Index />} />\r\n+              <Route path=\"/men\" element={<Men />} />\r\n+              <Route path=\"/women\" element={<Women />} />\r\n+              <Route path=\"/bestsellers\" element={<Bestsellers />} />\r\n+              <Route path=\"/about\" element={<About />} />\r\n+              <Route path=\"/contact\" element={<Contact />} />\r\n+              <Route path=\"/privacy\" element={<Privacy />} />\r\n+              <Route path=\"/terms\" element={<Terms />} />\r\n+              <Route path=\"*\" element={<NotFound />} />\r\n+            </Routes>\r\n+          </BrowserRouter>\r\n+        </TooltipProvider>\r\n+      </CartProvider>\r\n+    </QueryClientProvider>\r\n+  </HelmetProvider>\r\n );\r\n \r\n export default App;\r\n"
+                },
+                {
+                    "date": 1766782342018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Toaster as Sonner } from \"@/components/ui/sonner\";\r\n import { TooltipProvider } from \"@/components/ui/tooltip\";\r\n import { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\r\n import { BrowserRouter, Routes, Route } from \"react-router-dom\";\r\n-import { HelmetProvider } from \"react-helmet-async\";\r\n+// import { HelmetProvider } from \"react-helmet-async\";\r\n import { CartProvider } from \"@/contexts/CartContext\";\r\n import Index from \"./pages/Index\";\r\n import Men from \"./pages/Men\";\r\n import Women from \"./pages/Women\";\r\n"
                 }
             ],
             "date": 1763378457804,

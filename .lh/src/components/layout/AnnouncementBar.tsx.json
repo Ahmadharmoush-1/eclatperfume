@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/layout/AnnouncementBar.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1766781776648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1766863492711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,5 @@\n         <Gift className=\"h-4 w-4 animate-pulse\" />\r\n         <p className=\"text-xs sm:text-sm font-medium tracking-wide uppercase\">\r\n           Free Tester With Every Order\r\n         </p>\r\n-        <Gift className=\"h-4 w-4 animate-pulse\" />\r\n-      </div>\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n-export default AnnouncementBar;\n\\ No newline at end of file\n+        <Gift className=\"h-4 w-4 animate-pulse\" />\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1766863497857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import { Gift, Sparkles } from 'lucide-react';\r\n+\r\n+const AnnouncementBar = () => {\r\n+  const items = Array(6).fill(null);\r\n+\r\n+  return (\r\n+    <div className=\"bg-background py-2.5 overflow-hidden border-b border-border/30\">\r\n+      <div className=\"animate-marquee flex whitespace-nowrap\">\r\n+        {items.map((_, index) => (\r\n+          <div key={index} className=\"flex items-center mx-8\">\r\n+            <Gift className=\"h-4 w-4 text-gold mr-2\" />\r\n+            <span className=\"text-gold font-medium text-sm uppercase tracking-wider\">\r\n+              Free Tester With Every Order\r\n+            </span>\r\n+            <Sparkles className=\"h-3 w-3 text-gold/60 ml-2\" />\r\n+          </div>\r\n+        ))}\r\n+        {items.map((_, index) => (\r\n+          <div key={`repeat-${index}`} className=\"flex items-center mx-8\">\r\n+            <Gift className=\"h-4 w-4 text-gold mr-2\" />\r\n+            <span className=\"text-gold font-medium text-sm uppercase tracking-wider\">\r\n+              Free Tester With Every Order\r\n+            </span>\r\n+            <Sparkles className=\"h-3 w-3 text-gold/60 ml-2\" />\r\n+          </div>\r\n+        ))}\r\n+      </div>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default AnnouncementBar;\r\n"
+                }
+            ],
+            "date": 1766781776648,
+            "name": "Commit-0",
+            "content": "import { Gift } from 'lucide-react';\r\n\r\nconst AnnouncementBar = () => {\r\n  return (\r\n    <div className=\"bg-gradient-to-r from-gold-dark via-gold to-gold-dark py-2.5 px-4\">\r\n      <div className=\"container flex items-center justify-center gap-2 text-primary-foreground\">\r\n        <Gift className=\"h-4 w-4 animate-pulse\" />\r\n        <p className=\"text-xs sm:text-sm font-medium tracking-wide uppercase\">\r\n          Free Tester With Every Order\r\n        </p>\r\n        <Gift className=\"h-4 w-4 animate-pulse\" />\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AnnouncementBar;"
+        }
+    ]
+}

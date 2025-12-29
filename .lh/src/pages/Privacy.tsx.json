@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/Privacy.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1766781918714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1766781918714,
+            "name": "Commit-0",
+            "content": "import { Helmet } from 'react-helmet-async';\r\nimport Layout from '@/components/layout/Layout';\r\n\r\nconst Privacy = () => {\r\n  return (\r\n    <>\r\n      <Helmet>\r\n        <title>Privacy Policy | Eclat Parfum Beirut</title>\r\n        <meta\r\n          name=\"description\"\r\n          content=\"Read Eclat Parfum's privacy policy. Learn how we protect your personal information and data.\"\r\n        />\r\n      </Helmet>\r\n\r\n      <Layout>\r\n        <div className=\"container py-12 md:py-16\">\r\n          <div className=\"max-w-3xl mx-auto\">\r\n            <h1 className=\"font-serif text-4xl md:text-5xl font-bold mb-8 animate-fade-up\">\r\n              <span className=\"gradient-gold-text\">Privacy Policy</span>\r\n            </h1>\r\n\r\n            <div className=\"prose prose-invert max-w-none space-y-8 animate-fade-up delay-100\">\r\n              <section className=\"glass-card rounded-xl p-6\">\r\n                <h2 className=\"font-serif text-xl font-semibold text-foreground mb-3\">\r\n                  Information We Collect\r\n                </h2>\r\n                <p className=\"text-muted-foreground\">\r\n                  When you place an order, we collect your name, phone number, and delivery address \r\n                  to process and deliver your order. This information is shared only via WhatsApp \r\n                  for order fulfillment purposes.\r\n                </p>\r\n              </section>\r\n\r\n              <section className=\"glass-card rounded-xl p-6\">\r\n                <h2 className=\"font-serif text-xl font-semibold text-foreground mb-3\">\r\n                  How We Use Your Information\r\n                </h2>\r\n                <p className=\"text-muted-foreground\">\r\n                  Your information is used solely to process your orders, communicate about your \r\n                  delivery, and provide customer support. We do not sell or share your data with \r\n                  third parties for marketing purposes.\r\n                </p>\r\n              </section>\r\n\r\n              <section className=\"glass-card rounded-xl p-6\">\r\n                <h2 className=\"font-serif text-xl font-semibold text-foreground mb-3\">\r\n                  Data Security\r\n                </h2>\r\n                <p className=\"text-muted-foreground\">\r\n                  We take reasonable measures to protect your personal information. Orders are \r\n                  processed through WhatsApp's secure messaging platform.\r\n                </p>\r\n              </section>\r\n\r\n              <section className=\"glass-card rounded-xl p-6\">\r\n                <h2 className=\"font-serif text-xl font-semibold text-foreground mb-3\">\r\n                  Contact Us\r\n                </h2>\r\n                <p className=\"text-muted-foreground\">\r\n                  If you have any questions about our privacy practices, please contact us via \r\n                  WhatsApp at +961 70 123 456.\r\n                </p>\r\n              </section>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </Layout>\r\n    </>\r\n  );\r\n};\r\n\r\nexport default Privacy;\r\n"
+        }
+    ]
+}

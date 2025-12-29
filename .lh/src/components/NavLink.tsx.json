@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763378410570,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1766781829131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { NavLink as RouterNavLink, NavLinkProps } from \"react-router-dom\";\r\n+import { forwardRef } from \"react\";\r\n+import { cn } from \"@/lib/utils\";\r\n+\r\n+interface NavLinkCompatProps extends Omit<NavLinkProps, \"className\"> {\r\n+  className?: string;\r\n+  activeClassName?: string;\r\n+  pendingClassName?: string;\r\n+}\r\n+\r\n+const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(\r\n+  ({ className, activeClassName, pendingClassName, to, ...props }, ref) => {\r\n+    return (\r\n+      <RouterNavLink\r\n+        ref={ref}\r\n+        to={to}\r\n+        className={({ isActive, isPending }) =>\r\n+          cn(className, isActive && activeClassName, isPending && pendingClassName)\r\n+        }\r\n+        {...props}\r\n+      />\r\n+    );\r\n+  },\r\n+);\r\n+\r\n+NavLink.displayName = \"NavLink\";\r\n+\r\n+export { NavLink };\r\n"
                 }
             ],
             "date": 1763378410570,

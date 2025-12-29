@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/products/ProductGrid.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1766781821448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1766782260430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n \r\n       {hasMore && (\r\n         <div className=\"flex justify-center mt-8\">\r\n           <Button \r\n-            variant=\"goldOutline\" \r\n+            variant=\"se\" \r\n             size=\"lg\" \r\n             onClick={loadMore}\r\n           >\r\n             Load More Products\r\n"
+                },
+                {
+                    "date": 1766863574864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { Product } from '@/contexts/CartContext';\r\n import ProductCard from './ProductCard';\r\n import { usePagination } from '@/hooks/usePagination';\r\n import { Button } from '@/components/ui/button';\r\n+import { ChevronDown } from 'lucide-react';\r\n \r\n interface ProductGridProps {\r\n   products: Product[];\r\n   title?: string;\r\n@@ -18,9 +19,9 @@\n \r\n   return (\r\n     <section className=\"py-12 md:py-16\">\r\n       {(title || subtitle) && (\r\n-        <div className=\"text-center mb-10 md:mb-12\">\r\n+        <div className=\"text-center mb-10 md:mb-12 animate-fade-in-up\">\r\n           {title && (\r\n             <h2 className=\"font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-3\">\r\n               <span className=\"gradient-gold-text\">{title}</span>\r\n             </h2>\r\n@@ -38,20 +39,23 @@\n           <ProductCard \r\n             key={product.id} \r\n             product={product} \r\n             priority={index < 4}\r\n+            index={index % itemsPerPage}\r\n           />\r\n         ))}\r\n       </div>\r\n \r\n       {hasMore && (\r\n-        <div className=\"flex justify-center mt-8\">\r\n+        <div className=\"flex justify-center mt-10\">\r\n           <Button \r\n-            variant=\"se\" \r\n+            variant=\"goldOutline\" \r\n             size=\"lg\" \r\n             onClick={loadMore}\r\n+            className=\"group hover:scale-105 transition-transform duration-300\"\r\n           >\r\n             Load More Products\r\n+            <ChevronDown className=\"ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform duration-300\" />\r\n           </Button>\r\n         </div>\r\n       )}\r\n     </section>\r\n"
+                },
+                {
+                    "date": 1766863710737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n \r\n       {hasMore && (\r\n         <div className=\"flex justify-center mt-10\">\r\n           <Button \r\n-            variant=\"goldOutline\" \r\n+            variant=\"secondary\" \r\n             size=\"lg\" \r\n             onClick={loadMore}\r\n             className=\"group hover:scale-105 transition-transform duration-300\"\r\n           >\r\n"
+                }
+            ],
+            "date": 1766781821448,
+            "name": "Commit-0",
+            "content": "import { Product } from '@/contexts/CartContext';\r\nimport ProductCard from './ProductCard';\r\nimport { usePagination } from '@/hooks/usePagination';\r\nimport { Button } from '@/components/ui/button';\r\n\r\ninterface ProductGridProps {\r\n  products: Product[];\r\n  title?: string;\r\n  subtitle?: string;\r\n  itemsPerPage?: number;\r\n}\r\n\r\nconst ProductGrid = ({ products, title, subtitle, itemsPerPage = 8 }: ProductGridProps) => {\r\n  const { currentItems, hasMore, loadMore } = usePagination({\r\n    items: products,\r\n    itemsPerPage,\r\n  });\r\n\r\n  return (\r\n    <section className=\"py-12 md:py-16\">\r\n      {(title || subtitle) && (\r\n        <div className=\"text-center mb-10 md:mb-12\">\r\n          {title && (\r\n            <h2 className=\"font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-3\">\r\n              <span className=\"gradient-gold-text\">{title}</span>\r\n            </h2>\r\n          )}\r\n          {subtitle && (\r\n            <p className=\"text-muted-foreground text-lg max-w-2xl mx-auto\">\r\n              {subtitle}\r\n            </p>\r\n          )}\r\n        </div>\r\n      )}\r\n\r\n      <div className=\"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6\">\r\n        {currentItems.map((product, index) => (\r\n          <ProductCard \r\n            key={product.id} \r\n            product={product} \r\n            priority={index < 4}\r\n          />\r\n        ))}\r\n      </div>\r\n\r\n      {hasMore && (\r\n        <div className=\"flex justify-center mt-8\">\r\n          <Button \r\n            variant=\"goldOutline\" \r\n            size=\"lg\" \r\n            onClick={loadMore}\r\n          >\r\n            Load More Products\r\n          </Button>\r\n        </div>\r\n      )}\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default ProductGrid;\r\n"
+        }
+    ]
+}

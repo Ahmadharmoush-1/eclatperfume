@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763378499459,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1766782038822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n     \"next-themes\": \"^0.3.0\",\n     \"react\": \"^18.3.1\",\n     \"react-day-picker\": \"^8.10.1\",\n     \"react-dom\": \"^18.3.1\",\n+    \"react-helmet-async\": \"^2.0.5\",\n     \"react-hook-form\": \"^7.61.1\",\n     \"react-resizable-panels\": \"^2.1.9\",\n     \"react-router-dom\": \"^6.30.1\",\n     \"recharts\": \"^2.15.4\",\n@@ -72,12 +73,12 @@\n     \"eslint\": \"^9.32.0\",\n     \"eslint-plugin-react-hooks\": \"^5.2.0\",\n     \"eslint-plugin-react-refresh\": \"^0.4.20\",\n     \"globals\": \"^15.15.0\",\n-    \"lovable-tagger\": \"^1.1.11\",\n+    \"lovable-tagger\": \"^1.1.13\",\n     \"postcss\": \"^8.5.6\",\n     \"tailwindcss\": \"^3.4.17\",\n     \"typescript\": \"^5.8.3\",\n     \"typescript-eslint\": \"^8.38.0\",\n     \"vite\": \"^5.4.19\"\n   }\n\\ No newline at end of file\n-}\n+}\n"
                 }
             ],
             "date": 1763378499459,

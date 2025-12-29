@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/ui/OptimizedImage.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1766782373386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1766782373386,
+            "name": "Commit-0",
+            "content": "import { useState, useRef, useEffect, ImgHTMLAttributes } from 'react';\r\nimport { cn } from '@/lib/utils';\r\n\r\ninterface OptimizedImageProps extends ImgHTMLAttributes<HTMLImageElement> {\r\n  src: string;\r\n  alt: string;\r\n  priority?: boolean;\r\n  aspectRatio?: 'square' | '4/3' | '3/4' | '16/9';\r\n  placeholderColor?: string;\r\n}\r\n\r\nconst OptimizedImage = ({\r\n  src,\r\n  alt,\r\n  priority = false,\r\n  aspectRatio = 'square',\r\n  className,\r\n  placeholderColor,\r\n  ...props\r\n}: OptimizedImageProps) => {\r\n  const [isLoaded, setIsLoaded] = useState(false);\r\n  const [isInView, setIsInView] = useState(priority);\r\n  const imgRef = useRef<HTMLDivElement>(null);\r\n\r\n  const aspectClasses = {\r\n    square: 'aspect-square',\r\n    '4/3': 'aspect-[4/3]',\r\n    '3/4': 'aspect-[3/4]',\r\n    '16/9': 'aspect-video',\r\n  };\r\n\r\n  useEffect(() => {\r\n    if (priority) {\r\n      setIsInView(true);\r\n      return;\r\n    }\r\n\r\n    const observer = new IntersectionObserver(\r\n      ([entry]) => {\r\n        if (entry.isIntersecting) {\r\n          setIsInView(true);\r\n          observer.disconnect();\r\n        }\r\n      },\r\n      {\r\n        rootMargin: '100px',\r\n        threshold: 0.01,\r\n      }\r\n    );\r\n\r\n    if (imgRef.current) {\r\n      observer.observe(imgRef.current);\r\n    }\r\n\r\n    return () => observer.disconnect();\r\n  }, [priority]);\r\n\r\n  return (\r\n    <div\r\n      ref={imgRef}\r\n      className={cn(\r\n        'relative overflow-hidden bg-muted',\r\n        aspectClasses[aspectRatio],\r\n        className\r\n      )}\r\n    >\r\n      {/* Placeholder */}\r\n      {!isLoaded && (\r\n        <div \r\n          className=\"absolute inset-0 bg-gradient-to-br from-muted to-card\"\r\n          style={placeholderColor ? { backgroundColor: placeholderColor } : undefined}\r\n        />\r\n      )}\r\n      \r\n      {/* Image */}\r\n      {isInView && (\r\n        <img\r\n          src={src}\r\n          alt={alt}\r\n          loading={priority ? 'eager' : 'lazy'}\r\n          decoding={priority ? 'sync' : 'async'}\r\n          onLoad={() => setIsLoaded(true)}\r\n          className={cn(\r\n            'h-full w-full object-cover transition-opacity duration-300',\r\n            isLoaded ? 'opacity-100' : 'opacity-0'\r\n          )}\r\n          {...props}\r\n        />\r\n      )}\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default OptimizedImage;\r\n"
+        }
+    ]
+}

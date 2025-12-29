@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/home/CollectionPreview.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1766781756428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1766782312121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             </h2>\r\n             <p className=\"text-muted-foreground\">{subtitle}</p>\r\n           </div>\r\n           <Link to={link}>\r\n-            <Button variant=\"goldOutline\" className=\"group\">\r\n+            <Button variant=\"secondary\" className=\"group\">\r\n               {linkLabel}\r\n               <ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform\" />\r\n             </Button>\r\n           </Link>\r\n"
+                },
+                {
+                    "date": 1766863437489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,35 +22,36 @@\n   return (\r\n     <section className=\"py-12 md:py-16\">\r\n       <div className=\"container\">\r\n         {/* Header */}\r\n-        <div className=\"flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-10 gap-4\">\r\n+        <div className=\"flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-10 gap-4 animate-fade-in-up\">\r\n           <div>\r\n             <h2 className=\"font-serif text-3xl md:text-4xl font-bold mb-2\">\r\n               <span className=\"gradient-gold-text\">{title}</span>\r\n             </h2>\r\n             <p className=\"text-muted-foreground\">{subtitle}</p>\r\n           </div>\r\n           <Link to={link}>\r\n-            <Button variant=\"secondary\" className=\"group\">\r\n+            <Button variant=\"goldOutline\" className=\"group hover:scale-105 transition-transform duration-300\">\r\n               {linkLabel}\r\n-              <ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform\" />\r\n+              <ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform duration-300\" />\r\n             </Button>\r\n           </Link>\r\n         </div>\r\n \r\n-        {/* Products Grid - first 4 products are priority loaded */}\r\n+        {/* Products Grid */}\r\n         <div className=\"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6\">\r\n           {products.slice(0, 4).map((product, index) => (\r\n             <ProductCard \r\n               key={product.id} \r\n               product={product} \r\n               priority={index < 2}\r\n+              index={index}\r\n             />\r\n           ))}\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n };\r\n \r\n-export default CollectionPreview;\r\n+export default CollectionPreview;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1766863630513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             </h2>\r\n             <p className=\"text-muted-foreground\">{subtitle}</p>\r\n           </div>\r\n           <Link to={link}>\r\n-            <Button variant=\"goldOutline\" className=\"group hover:scale-105 transition-transform duration-300\">\r\n+            <Button variant=\"secondary\" className=\"group hover:scale-105 transition-transform duration-300\">\r\n               {linkLabel}\r\n               <ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform duration-300\" />\r\n             </Button>\r\n           </Link>\r\n"
+                }
+            ],
+            "date": 1766781756428,
+            "name": "Commit-0",
+            "content": "import { Link } from 'react-router-dom';\r\nimport { ArrowRight } from 'lucide-react';\r\nimport { Product } from '@/contexts/CartContext';\r\nimport ProductCard from '@/components/products/ProductCard';\r\nimport { Button } from '@/components/ui/button';\r\n\r\ninterface CollectionPreviewProps {\r\n  title: string;\r\n  subtitle: string;\r\n  products: Product[];\r\n  link: string;\r\n  linkLabel?: string;\r\n}\r\n\r\nconst CollectionPreview = ({\r\n  title,\r\n  subtitle,\r\n  products,\r\n  link,\r\n  linkLabel = 'View All',\r\n}: CollectionPreviewProps) => {\r\n  return (\r\n    <section className=\"py-12 md:py-16\">\r\n      <div className=\"container\">\r\n        {/* Header */}\r\n        <div className=\"flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-10 gap-4\">\r\n          <div>\r\n            <h2 className=\"font-serif text-3xl md:text-4xl font-bold mb-2\">\r\n              <span className=\"gradient-gold-text\">{title}</span>\r\n            </h2>\r\n            <p className=\"text-muted-foreground\">{subtitle}</p>\r\n          </div>\r\n          <Link to={link}>\r\n            <Button variant=\"goldOutline\" className=\"group\">\r\n              {linkLabel}\r\n              <ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform\" />\r\n            </Button>\r\n          </Link>\r\n        </div>\r\n\r\n        {/* Products Grid - first 4 products are priority loaded */}\r\n        <div className=\"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6\">\r\n          {products.slice(0, 4).map((product, index) => (\r\n            <ProductCard \r\n              key={product.id} \r\n              product={product} \r\n              priority={index < 2}\r\n            />\r\n          ))}\r\n        </div>\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default CollectionPreview;\r\n"
+        }
+    ]
+}

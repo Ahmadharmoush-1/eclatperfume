@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/hooks/usePagination.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1766781869311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1766781869311,
+            "name": "Commit-0",
+            "content": "import { useState, useMemo, useCallback } from 'react';\r\n\r\ninterface UsePaginationOptions<T> {\r\n  items: T[];\r\n  itemsPerPage?: number;\r\n}\r\n\r\ninterface UsePaginationResult<T> {\r\n  currentItems: T[];\r\n  currentPage: number;\r\n  totalPages: number;\r\n  hasMore: boolean;\r\n  loadMore: () => void;\r\n  reset: () => void;\r\n  isFirstPage: boolean;\r\n  isLastPage: boolean;\r\n  goToPage: (page: number) => void;\r\n  nextPage: () => void;\r\n  prevPage: () => void;\r\n}\r\n\r\nexport function usePagination<T>({\r\n  items,\r\n  itemsPerPage = 8,\r\n}: UsePaginationOptions<T>): UsePaginationResult<T> {\r\n  const [currentPage, setCurrentPage] = useState(1);\r\n\r\n  const totalPages = Math.ceil(items.length / itemsPerPage);\r\n\r\n  const currentItems = useMemo(() => {\r\n    return items.slice(0, currentPage * itemsPerPage);\r\n  }, [items, currentPage, itemsPerPage]);\r\n\r\n  const hasMore = currentPage < totalPages;\r\n  const isFirstPage = currentPage === 1;\r\n  const isLastPage = currentPage >= totalPages;\r\n\r\n  const loadMore = useCallback(() => {\r\n    if (hasMore) {\r\n      setCurrentPage((prev) => prev + 1);\r\n    }\r\n  }, [hasMore]);\r\n\r\n  const reset = useCallback(() => {\r\n    setCurrentPage(1);\r\n  }, []);\r\n\r\n  const goToPage = useCallback(\r\n    (page: number) => {\r\n      if (page >= 1 && page <= totalPages) {\r\n        setCurrentPage(page);\r\n      }\r\n    },\r\n    [totalPages]\r\n  );\r\n\r\n  const nextPage = useCallback(() => {\r\n    if (!isLastPage) {\r\n      setCurrentPage((prev) => prev + 1);\r\n    }\r\n  }, [isLastPage]);\r\n\r\n  const prevPage = useCallback(() => {\r\n    if (!isFirstPage) {\r\n      setCurrentPage((prev) => prev - 1);\r\n    }\r\n  }, [isFirstPage]);\r\n\r\n  return {\r\n    currentItems,\r\n    currentPage,\r\n    totalPages,\r\n    hasMore,\r\n    loadMore,\r\n    reset,\r\n    isFirstPage,\r\n    isLastPage,\r\n    goToPage,\r\n    nextPage,\r\n    prevPage,\r\n  };\r\n}"
+        }
+    ]
+}

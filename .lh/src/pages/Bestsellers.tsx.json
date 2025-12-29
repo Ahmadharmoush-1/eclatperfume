@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/Bestsellers.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1766781883429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1766863600315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n         />\r\n       </Helmet>\r\n \r\n       <Layout>\r\n-        <div className=\"container py-8\">\r\n+        <div className=\"container py-8 page-transition\">\r\n           {/* Page Header */}\r\n-          <div className=\"text-center mb-8 md:mb-12 animate-fade-up\">\r\n+          <div className=\"text-center mb-8 md:mb-12 animate-fade-in-up\">\r\n             <h1 className=\"font-serif text-4xl md:text-5xl font-bold mb-4\">\r\n               <span className=\"gradient-gold-text\">Bestsellers</span>\r\n             </h1>\r\n             <p className=\"text-muted-foreground text-lg max-w-2xl mx-auto\">\r\n"
+                }
+            ],
+            "date": 1766781883429,
+            "name": "Commit-0",
+            "content": "import { Helmet } from 'react-helmet-async';\r\nimport Layout from '@/components/layout/Layout';\r\nimport ProductGrid from '@/components/products/ProductGrid';\r\nimport { getProductsByCategory } from '@/data/products';\r\n\r\nconst Bestsellers = () => {\r\n  const products = getProductsByCategory('bestseller');\r\n\r\n  return (\r\n    <>\r\n      <Helmet>\r\n        <title>Bestsellers | Eclat Parfum Beirut</title>\r\n        <meta\r\n          name=\"description\"\r\n          content=\"Shop our bestselling perfumes loved by customers across Lebanon. Premium fragrances with free testers and fast delivery.\"\r\n        />\r\n      </Helmet>\r\n\r\n      <Layout>\r\n        <div className=\"container py-8\">\r\n          {/* Page Header */}\r\n          <div className=\"text-center mb-8 md:mb-12 animate-fade-up\">\r\n            <h1 className=\"font-serif text-4xl md:text-5xl font-bold mb-4\">\r\n              <span className=\"gradient-gold-text\">Bestsellers</span>\r\n            </h1>\r\n            <p className=\"text-muted-foreground text-lg max-w-2xl mx-auto\">\r\n              Our most loved fragrances, chosen by customers across Lebanon.\r\n              These signature scents define the Eclat experience.\r\n            </p>\r\n          </div>\r\n\r\n          <ProductGrid products={products} />\r\n        </div>\r\n      </Layout>\r\n    </>\r\n  );\r\n};\r\n\r\nexport default Bestsellers;\r\n"
+        }
+    ]
+}

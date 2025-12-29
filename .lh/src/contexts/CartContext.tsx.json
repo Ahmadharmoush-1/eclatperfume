@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/contexts/CartContext.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1766781838013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1766781838013,
+            "name": "Commit-0",
+            "content": "import React, { createContext, useContext, useState, useCallback } from 'react';\r\n\r\nexport interface Product {\r\n  id: string;\r\n  name: string;\r\n  price: number;\r\n  image: string;\r\n  category: 'men' | 'women' | 'bestseller';\r\n  description?: string;\r\n}\r\n\r\nexport interface CartItem extends Product {\r\n  quantity: number;\r\n}\r\n\r\ninterface CartContextType {\r\n  items: CartItem[];\r\n  addToCart: (product: Product) => void;\r\n  removeFromCart: (productId: string) => void;\r\n  updateQuantity: (productId: string, quantity: number) => void;\r\n  clearCart: () => void;\r\n  totalItems: number;\r\n  totalPrice: number;\r\n  isCartOpen: boolean;\r\n  setIsCartOpen: (open: boolean) => void;\r\n}\r\n\r\nconst CartContext = createContext<CartContextType | undefined>(undefined);\r\n\r\nexport const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {\r\n  const [items, setItems] = useState<CartItem[]>([]);\r\n  const [isCartOpen, setIsCartOpen] = useState(false);\r\n\r\n  const addToCart = useCallback((product: Product) => {\r\n    setItems((prevItems) => {\r\n      const existingItem = prevItems.find((item) => item.id === product.id);\r\n      if (existingItem) {\r\n        return prevItems.map((item) =>\r\n          item.id === product.id\r\n            ? { ...item, quantity: item.quantity + 1 }\r\n            : item\r\n        );\r\n      }\r\n      return [...prevItems, { ...product, quantity: 1 }];\r\n    });\r\n  }, []);\r\n\r\n  const removeFromCart = useCallback((productId: string) => {\r\n    setItems((prevItems) => prevItems.filter((item) => item.id !== productId));\r\n  }, []);\r\n\r\n  const updateQuantity = useCallback((productId: string, quantity: number) => {\r\n    if (quantity <= 0) {\r\n      removeFromCart(productId);\r\n      return;\r\n    }\r\n    setItems((prevItems) =>\r\n      prevItems.map((item) =>\r\n        item.id === productId ? { ...item, quantity } : item\r\n      )\r\n    );\r\n  }, [removeFromCart]);\r\n\r\n  const clearCart = useCallback(() => {\r\n    setItems([]);\r\n  }, []);\r\n\r\n  const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);\r\n  const totalPrice = items.reduce((sum, item) => sum + item.price * item.quantity, 0);\r\n\r\n  return (\r\n    <CartContext.Provider\r\n      value={{\r\n        items,\r\n        addToCart,\r\n        removeFromCart,\r\n        updateQuantity,\r\n        clearCart,\r\n        totalItems,\r\n        totalPrice,\r\n        isCartOpen,\r\n        setIsCartOpen,\r\n      }}\r\n    >\r\n      {children}\r\n    </CartContext.Provider>\r\n  );\r\n};\r\n\r\nexport const useCart = () => {\r\n  const context = useContext(CartContext);\r\n  if (context === undefined) {\r\n    throw new Error('useCart must be used within a CartProvider');\r\n  }\r\n  return context;\r\n};\r\n"
+        }
+    ]
+}
