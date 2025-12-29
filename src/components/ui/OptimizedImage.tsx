@@ -5,29 +5,18 @@ interface OptimizedImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   alt: string;
   priority?: boolean;
-  aspectRatio?: 'square' | '4/3' | '3/4' | '16/9';
-  placeholderColor?: string;
 }
 
 const OptimizedImage = ({
   src,
   alt,
   priority = false,
-  aspectRatio = 'square',
   className,
-  placeholderColor,
   ...props
 }: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
-  const imgRef = useRef<HTMLDivElement>(null);
-
-  const aspectClasses = {
-    square: 'aspect-square',
-    '4/3': 'aspect-[4/3]',
-    '3/4': 'aspect-[3/4]',
-    '16/9': 'aspect-video',
-  };
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (priority) {
@@ -43,36 +32,30 @@ const OptimizedImage = ({
         }
       },
       {
-        rootMargin: '100px',
+        rootMargin: '120px',
         threshold: 0.01,
       }
     );
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+    if (wrapperRef.current) observer.observe(wrapperRef.current);
 
     return () => observer.disconnect();
   }, [priority]);
 
   return (
     <div
-      ref={imgRef}
-     className={cn(
-  'h-full w-full object-contain scale-110 transition-all duration-500',
-  isLoaded ? 'opacity-100' : 'opacity-0'
-)}
+  ref={wrapperRef}
+  className={cn(
+    'relative w-full h-full bg-white flex items-center justify-center',
+    'overflow-hidden'
+  )}
+>
 
-    >
-      {/* Placeholder */}
+      {/* White placeholder to prevent dark flash */}
       {!isLoaded && (
-        <div 
-          className="absolute inset-0 bg-gradient-to-br from-muted to-card"
-          style={placeholderColor ? { backgroundColor: placeholderColor } : undefined}
-        />
+        <div className="absolute inset-0 bg-white" />
       )}
-      
-      {/* Image */}
+
       {isInView && (
         <img
           src={src}
@@ -81,7 +64,8 @@ const OptimizedImage = ({
           decoding={priority ? 'sync' : 'async'}
           onLoad={() => setIsLoaded(true)}
           className={cn(
-            'h-full w-full object-cover transition-opacity duration-300',
+            'max-w-[90%] max-h-[90%] object-contain',
+            'transition-opacity duration-300',
             isLoaded ? 'opacity-100' : 'opacity-0'
           )}
           {...props}

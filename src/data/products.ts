@@ -107,7 +107,7 @@ export const products: Product[] = [
     name: 'Sauvage',
     price: 45,
     image: '/photos/men/sauvage.jpg',
-    category: 'men',
+    category: 'bestseller',
     description: 'A bold, masculine fragrance with notes of leather and wood',
   },
     {
@@ -115,7 +115,7 @@ export const products: Product[] = [
     name: 'Bleu de Chanel',
     price: 65,
     image: '/photos/men/bluedechanel.jpg',
-    category: 'men',
+    category: 'bestseller',
     description: 'Premium Arabian oud with rich, deep tones',
   },
   {
@@ -123,7 +123,7 @@ export const products: Product[] = [
     name: 'Black Opium Yves SaintLaurent ',
     price: 48,
     image: '/photos/women/BlackOpiumYvesSaintLaurent.jpg',
-    category: 'women',
+    category: 'bestseller',
     description: 'Delicate Bulgarian rose with soft musk',
   },
   {
@@ -131,7 +131,7 @@ export const products: Product[] = [
     name: 'Libre Yves Saint Laurent',
     price: 45,
     image: '/photos/women/LibreYvesSaintLaurent.jpg',
-    category: 'women',
+    category: 'bestseller',
     description: 'Night-blooming jasmine with soft sandalwood',
   },
 ];
